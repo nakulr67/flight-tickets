@@ -1,3 +1,4 @@
+AOS.init();
 const texts = [
     "Amazing experiences await you.",
     "Book now and enjoy great discounts!",

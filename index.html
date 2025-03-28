@@ -12,6 +12,8 @@
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
     <!-- <meta name="description" content="Book affordable flights from Trycity to various destinations worldwide. Enjoy easy bookings, exclusive deals, and seamless travel experiences tailored for your needs. Find your perfect flight today!"> -->
     <meta name="description"
         content="Book affordable flights from Trycity to various destinations. Enjoy easy bookings and exclusive deals. Find your perfect flight today!">
@@ -25,8 +27,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed shadow-lg"
-        style="z-index: 44; width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed shadow-lg  " data-aos="fade-down"
+        data-aos-duration="1000" style="z-index: 44; width: 100%;">
         <!-- Left Side: Logo -->
         <a class="navbar-brand" href="#">
             <img src="./img/logo.png" alt="Logo" class="d-inline-block align-top" style="width: 100px; height: auto;">
@@ -39,7 +41,6 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <!-- Center: Nav Links -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
             <ul class="navbar-nav">
@@ -84,7 +85,7 @@
 
     <div class="banner">
         <div>
-            <h1 >Book Your <b> Flights </b> Now </h1>
+            <h1>Book Your <b> Flights </b> Now </h1>
             <p class="banner-text">
             <div class="flex-wrap " style="height: 40px;">
                 <span id="fixed-text">Easy booking, affordable prices. </span>
@@ -146,7 +147,7 @@
             </form>
         </div> -->
 
-        <div class="flight-search-form">
+        <div class="flight-search-form" data-aos="zoom-in" data-aos-duration="1000">
             <!-- Trip Toggle Button -->
             <div class="trip-toggle" id="tripToggle">
                 <div class="slider one-way" id="slider"></div>
@@ -159,7 +160,8 @@
                     <input type="text" id="from-input" class="form-control" required placeholder=" " />
                     <label for="from-input">Flying From</label>
                     <ul id="from-suggestions-list" class="suggestions-list"></ul>
-                    <div class="error-message" id="from-alert">Cannot be the same as destination</div>
+                    <div class="error-message bg-white shadow-lg p-2" style=" border-radius: 15px;" id="from-alert">
+                        Cannot be the same as destination</div>
                 </div>
 
                 <div class="form-group mt-2 mt-md-0">
@@ -167,7 +169,8 @@
                     <label for="to-input">Destination</label>
 
                     <ul id="to-suggestions-list" class="suggestions-list"></ul>
-                    <div class="error-message" id="to-alert">Cannot be the same as origin</div>
+                    <div class="error-message bg-white shadow-lg text-center p-2" style="border-radius: 15px;"
+                        id="to-alert">Cannot be the same as origin</div>
                 </div>
 
                 <div class="form-group mt-2 mt-md-0">
@@ -324,8 +327,8 @@
             </div>
         </div>
     </div> -->
-    <div class="rating-section">
-        <div class="container">
+    <div class="rating-section overflow-hidden">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <div class="row">
                 <div class="col-md-4">
                     <div class="rating-card">
@@ -366,195 +369,197 @@
     </div>
 
     <!-- ====================img section=============== -->
-    <div class="container mt-4 shadow-lg" style="border-radius: 10px;">
-        <h2>Popular Flight Routes</h2>
-        <div class="row">
-            <div class="col-md-6 p-3">
-                <button class="btn btn-outline-primary " id="usa-btn">USA Routes</button>
-                <button class="btn btn-outline-primary" id="india-btn">India Routes</button>
-            </div>
-        </div>
-
-        <!-- USA Flight Routes Section -->
-        <div class="row fade show  " id="usa-routes">
-            <div class="d-md-flex ">
-
-                <div class="col-md-4 open-modal" style="cursor: pointer;">
-                    <div class="card1 ">
-                        <img src="./img/blog2.jpg" alt="New York Image" class="card-img-top " />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">New York</h5>
-                                    <small>Fare Starting At</small>
-                                </div>
-                                <div class="text-end">
-                                    <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$750*</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Los Angeles Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Los Angeles</h5>
-                                    <small>Fare Starting At</small>
-                                </div>
-                                <div class="text-end">
-                                    <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$680*</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Chicago</h5>
-                                    <small>Fare Starting At</small>
-                                </div>
-                                <div class="text-end">
-                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$620*</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-md-flex mt-3 pb-3">
-                <div class="col-md-8 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Chicago</h5>
-                                    <small>Fare Starting At</small>
-                                </div>
-                                <div class="text-end">
-                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$620*</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Chicago</h5>
-                                    <small>Fare Starting At</small>
-                                </div>
-                                <div class="text-end">
-                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$620*</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="overflow-hidden">
+        <div class="container mt-4 shadow-lg" style="border-radius: 10px;" data-aos="zoom-out" data-aos-duration="1000">
+            <h2>Popular Flight Routes</h2>
+            <div class="row">
+                <div class="col-md-6 p-3">
+                    <button class="btn btn-outline-primary " id="usa-btn">USA Routes</button>
+                    <button class="btn btn-outline-primary" id="india-btn">India Routes</button>
                 </div>
             </div>
 
-        </div>
+            <!-- USA Flight Routes Section -->
+            <div class="row fade show  " id="usa-routes">
+                <div class="d-md-flex ">
 
-        <!-- India Flight Routes Section (Initially Hidden) -->
-        <div class="row fade" id="india-routes" style="display: none;">
-            <div class="d-md-flex">
-                <div class="col-md-4 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Delhi Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Delhi</h5>
-                                    <small>Fare Starting At</small>
+                    <div class="col-md-4 open-modal" style="cursor: pointer;">
+                        <div class="card1 ">
+                            <img src="./img/blog2.jpg" alt="New York Image" class="card-img-top " />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">New York</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$750*</div>
+                                    </div>
                                 </div>
-                                <div class="text-end">
-                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center ">$525*</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Los Angeles Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Los Angeles</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$680*</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Chicago</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$620*</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Mumbai Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Mumbai</h5>
-                                    <small>Fare Starting At</small>
+                <div class="d-md-flex mt-3 pb-3">
+                    <div class="col-md-8 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Chicago</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$620*</div>
+                                    </div>
                                 </div>
-                                <div class="text-end">
-                                    <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$600*</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Chicago</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$620*</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Bangalore Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Bangalore</h5>
-                                    <small>Fare Starting At</small>
-                                </div>
-                                <div class="text-end">
-                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$580*</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
-            <div class="d-md-flex mt-3 pb-3">
-                <div class="col-md-8 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Chicago</h5>
-                                    <small>Fare Starting At</small>
+
+            <!-- India Flight Routes Section (Initially Hidden) -->
+            <div class="row fade" id="india-routes" style="display: none;">
+                <div class="d-md-flex" >
+                    <div class="col-md-4 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Delhi Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Delhi</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center ">$525*</div>
+                                    </div>
                                 </div>
-                                <div class="text-end">
-                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$620*</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Mumbai Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Mumbai</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$600*</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Bangalore Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Bangalore</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$580*</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
-                    <div class="card1">
-                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
-                        <div class="card-body1">
-                            <div class="overlay d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-0">Chicago</h5>
-                                    <small>Fare Starting At</small>
+                <div class="d-md-flex mt-3 pb-3">
+                    <div class="col-md-8 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Chicago</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$620*</div>
+                                    </div>
                                 </div>
-                                <div class="text-end">
-                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
-                                    <div class="price text-center">$620*</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
+                        <div class="card1">
+                            <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                            <div class="card-body1">
+                                <div class="overlay d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0">Chicago</h5>
+                                        <small>Fare Starting At</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                        <div class="price text-center">$620*</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -601,8 +606,8 @@
             </div>
         </div>
     </div>   -->
-
-    <div class="container popular-flights-section mt-5 shadow-lg" style="border-radius: 10px;">
+ <div class="overflow-hidden">
+    <div class="container popular-flights-section mt-5 shadow-lg" style="border-radius: 10px;"  data-aos="zoom-out" data-aos-duration="1000">
         <h2 class="section-heading text-center p-3 heading">Explore Our Destinations</h2>
         <div class="flight-buttons text-center text-md-left p-2">
             <button class="btn btn-primary shadow-none border-0  active " id="roundTripBtn">Round Trip</button>
@@ -751,12 +756,13 @@
             </div>
         </div>
     </div>
+</div>
 
 
-    <div class="container shadow-lg mt-4" style="border-radius: 10px;">
+    <div class="container shadow-lg mt-4 overflow-hidden" style="border-radius: 10px;">
         <div class="row">
             <!-- First Column: Heading and Text -->
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000" >
                 <div class="section-content">
                     <div class="divider">
                     </div>
@@ -781,7 +787,7 @@
 
 
             <!-- Second Column: Nested Columns -->
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
                 <div class="row nested-cols">
                     <div class="col-md-12 mb-3">
                         <div class="nested-content">
@@ -825,8 +831,8 @@
     </div>
 
     <!-- ==================img================= -->
-    <div class=" mt-4 p-3 ">
-        <div class="banner1 container shadow-lg d-md-flex p-3 text-center ">
+    <div class=" mt-4 p-3 overflow-hidden">
+        <div class="banner1 container shadow-lg d-md-flex p-3 text-center " data-aos="zoom-in" data-aos-duration="1000">
             <div class="banner-text1">
                 Exclusive &amp; Unpublished Great Deals Are Here! Where Are You?
             </div>
@@ -845,8 +851,8 @@
                 <h2 class="p-3 text-light">
                     Why Choose MyTicketsToIndia?
                 </h2>
-                <div>
-                    <p class="text-light text-justify">
+                <div class="overflow-hidden">
+                    <p class="text-light text-justify" data-aos="fade-right" data-aos-duration="1000">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis, quos blanditiis earum,
                         odit veniam at praesentium ipsa assumenda totam distinctio eveniet magnam numquam quae molestias
                         quod placeat, deleniti facere!
@@ -865,7 +871,7 @@
 
             <div class="col-md-6 m-auto d-flex align-content-center justify-content-center flex-column">
                 <div class="row" style="gap: 20px;">
-                    <div class="box col-md-5 flex-column text-center m-1">
+                    <div class="box col-md-5 flex-column text-center m-1" data-aos="zoom-out" data-aos-duration="3000">
                         <svg style="fill:rgb(69, 69, 234); " xmlns="http://www.w3.org/2000/svg" width="66" height="66"
                             fill="currentColor" class="bi bi-award-fill " viewBox="0 0 16 16">
                             <path
@@ -876,7 +882,7 @@
                             Company</p>
                     </div>
 
-                    <div class="box col-md-5 flex-column text-center m-1">
+                    <div class="box col-md-5 flex-column text-center m-1" data-aos="zoom-out" data-aos-duration="3000">
                         <svg style="fill:rgb(69, 69, 234); " xmlns="http://www.w3.org/2000/svg" width="66" height="66"
                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                             <path
@@ -887,7 +893,7 @@
                     </div>
                 </div>
                 <div class="row" style="gap:20px;">
-                    <div class="box col-md-5 mt-4 flex-column m-1">
+                    <div class="box col-md-5 mt-4 flex-column m-1" data-aos="zoom-out" data-aos-duration="3000">
                         <svg style="fill:rgb(69, 69, 234); height:66px; width:66px" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 640 512">
                             <path
@@ -898,7 +904,7 @@
 
                     </div>
 
-                    <div class="box col-md-5 mt-4 flex-column m-1">
+                    <div class="box col-md-5 mt-4 flex-column m-1" data-aos="zoom-out" data-aos-duration="3000">
                         <svg style="fill:rgb(69, 69, 234); height:66px; width:66px" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 384 512">
                             <path
@@ -914,13 +920,13 @@
     </div>
 
     <!-- ==================button section================ -->
-    <div class="container shadow mt-5" style="overflow: hidden !important;">
+    <div class="container shadow mt-5 overflow-hidden" style="overflow: hidden !important;">
         <h3 class="text-center font-weight-bold p-4">Travel Ticket Deals that are Genuine Steals</h3>
         <div class="m-3">
             <div style="height: 2px; background:red; width: 100px;" class="m-auto"></div>
         </div>
-        <div class="m-auto d-flex justify-content-center align-content-center shadow-lg"
-            style="outline: 2px solid rgb(184, 182, 182); width: fit-content; border-radius: 15px;">
+        <div class="m-auto d-flex justify-content-center align-content-center shadow-lg "
+            style="outline: 2px solid rgb(184, 182, 182); width: fit-content; border-radius: 15px;" data-aos="zoom-in" data-aos-duration="2000">
             <div class="p-2 position-relative">
                 <button class="btn btn-deal  active " data-text="Phone-Exclusive Deals - Enjoy Up To 40% Off*"
                     data-img="./img/Last-Minute-Deals.jpg"
@@ -977,7 +983,7 @@
         </div>
     </div>
     <!-- =======================blog section=========================== -->
-    <div class="container shadow-lg mt-5" style="border-radius: 15px;">
+    <div class="container shadow-lg mt-5 overflow-hidden" style="border-radius: 15px;">
         <div class="text-center">
             <h3 class="font-weight-bolder p-3">Blog</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
@@ -985,7 +991,7 @@
         <div class="row">
 
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card"  data-aos="fade-right" data-aos-duration="1000">
                     <img alt="A smartphone, glasses, and a keyboard on a desk" class="card-img-top" height="400"
                         src="./img/blog1.jpg" width="600" />
                     <div class="card-body">
@@ -1009,7 +1015,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in" data-aos-duration="2000">
                     <img alt="Various shades of grey swatches, a mug, and a candle" class="card-img-top" height="400"
                         src="./img/blog2.jpg" width="600" />
                     <div class="card-body">
@@ -1033,7 +1039,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card" data-aos="fade-left" data-aos-duration="1000">
                     <img alt="Chocolate chip cookies tied with red and white string" class="card-img-top" height="400"
                         src="./img/blog3.jpg" width="600" />
                     <div class="card-body">
@@ -1087,7 +1093,7 @@
             </div>
         </div>
     </div> -->
-    <div class="newsletter-container d-md-flex ">
+    <div class="newsletter-container d-md-flex " data-aos="zoom-in" data-aos-duration="1000">
         <div class="newsletter-text">
             <h2>Subscribe To Our Newsletter</h2>
         </div>
@@ -1122,8 +1128,8 @@
 
 
     <!-- ================FAQ section============ -->
-    <div style="background-color: white !important;" class="pb-2">
-        <div class="container shadow-lg pb-1" style="border-radius: 10px;">
+    <div style="background-color: white !important;" class="pb-2 overflow-hidden">
+        <div class="container shadow-lg pb-1" style="border-radius: 10px;" data-aos="zoom-in" data-aos-duration="1000">
             <h1 class="text-left font-weight-bold pl-2 pt-5" style="color: #007bff;">FAQ</h1>
             <div class="accordion mb-0" id="accordionExample">
                 <div class="item">
@@ -1210,9 +1216,9 @@
     </div>
 
 
-
-    <footer class="footer">
-        <div class="container-fluid bottom_border">
+<div class="overflow-hidden">
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container-fluid bottom_border" >
             <div class="col-md-5">
 
                 <img src="./img/visa logo.png" class="w-100 d-block" alt="">
@@ -1283,7 +1289,7 @@
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-           
+
 
             <ul class="social_footer_ul d-flex align-content-center justify-content-center">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -1292,29 +1298,39 @@
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
             <div class=" container d-flex align-content-center justify-content-center flex-column text-white">
-                
 
-                    <div class=" mt-4" style="height: 2px; background: #feffff; width: 100%;"></div>
-                    <div class="p-2 font-weight-bolder">
-                        Disclaimer
-                    </div>
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, delectus, ullam deleniti sunt iste asperiores placeat, libero cupiditate non architecto fugiat quidem reprehenderit ducimus eius assumenda sit. Minus, sint enim.
-                        it. Illo, delectus, ullam deleniti sunt iste asperiores placeat, libero cupiditate non architecto fugiat quidem reprehenderit ducimus 
+
+                <div class=" mt-4" style="height: 2px; background: #feffff; width: 100%;"></div>
+                <div class="p-2 font-weight-bolder">
+                    Disclaimer
+                </div>
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, delectus, ullam
+                    deleniti sunt iste asperiores placeat, libero cupiditate non architecto fugiat quidem reprehenderit
+                    ducimus eius assumenda sit. Minus, sint enim.
+                    it. Illo, delectus, ullam deleniti sunt iste asperiores placeat, libero cupiditate non architecto
+                    fugiat quidem reprehenderit ducimus
+                </p>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.qui saepe repudiandae
+                    neque, quo alias est!</p>
+                <span class="text-center">
+                    <p>COPYRIGHT ©
+                        <script>document.write(new Date().getFullYear());</script><a href="#">Your Company Name</a> ALL
+                        RIGHTS RESERVED.
                     </p>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.qui saepe repudiandae neque, quo alias est!</p>
-                    <span class="text-center"><p>COPYRIGHT © <script>document.write(new Date().getFullYear());</script><a href="#">Your Company Name</a> ALL RIGHTS RESERVED.</p>
-                    </span>
-                
+                </span>
+
             </div>
         </div>
 
     </footer>
+</div>
 
 
 
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <script type="application/ld+json">
         {
